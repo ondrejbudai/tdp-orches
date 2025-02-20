@@ -4,7 +4,7 @@ After=basic.target default-network.service
 Requires=default-network.service
 
 [Container]
-Image=docker.io/caddy:2.9.0-alpine
+Image=docker.io/caddy:2.9.1-alpine
 Volume=%h/web/caddy-data:/data:Z
 Volume=%h/web/Caddyfile:/etc/caddy/Caddyfile:Z
 Volume=%h/web/slh/www:/app/slh:ro,z
