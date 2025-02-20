@@ -1,0 +1,17 @@
+[Unit]
+Description=Transmission
+After=basic.target network.target
+
+[Container]
+Image=docker.io/linuxserver/transmission:latest
+Volume=/var/mnt/data/transmission/config:/config:Z
+Volume=/var/mnt/data/transmission/downloads:/downloads:Z
+Volume=/var/mnt/data/transmission/watch:/watch:Z
+PublishPort=51413:51413
+PublishPort=51413:51413/udp
+PublishPort=127.0.0.1:9091:9091
+PodmanArgs=--pull=newer
+Environment=PUID=0 PGID=0
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=budai.cz web
+After=basic.target default-network.service
+Requires=default-network.service
+
+[Container]
+Image=registry.gitlab.com/ondrejbudai/budai.cz:latest
+Network=default.network
+PodmanArgs=--pull=newer
+
+[Install]
+WantedBy=default.target

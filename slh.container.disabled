@@ -1,0 +1,12 @@
+[Unit]
+Description=SLH backend
+After=basic.target slh-build.service default-network.service
+Requires=slh-build.service default-network.service
+
+[Container]
+Image=slh
+Volume=%h/web/slh:/app:z
+Network=default.network
+
+[Install]
+WantedBy=default.target
