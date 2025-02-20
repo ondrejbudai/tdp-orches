@@ -1,0 +1,45 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update orches",
+      "fileMatch": [
+        "orches.container$"
+      ],
+      "matchStrings": [
+        "Image=\\S*:(?<currentDigest>\\S*)"
+      ],
+      "currentValueTemplate": "main",
+      "packageNameTemplate": "https://github.com/orches-team/orches",
+      "datasourceTemplate": "git-refs"
+    },
+    {
+      "customType": "regex",
+      "description": "Update orches",
+      "fileMatch": [
+        "web.container$"
+      ],
+      "matchStrings": [
+        "Image=\\S*:(?<currentDigest>\\S*)"
+      ],
+      "currentValueTemplate": "main",
+      "packageNameTemplate": "https://gitlab.com/ondrejbudai/budai.cz",
+      "datasourceTemplate": "git-refs"
+    },
+    {
+      "customType": "regex",
+      "description": "Update quadlet container images",
+      "fileMatch": [
+        "[.]container$"
+      ],
+      "matchStrings": [
+        "Image=(?<depName>\\S*):(?<currentValue>\\S*)"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
