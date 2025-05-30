@@ -2,7 +2,7 @@
 Description=Orches: container orchestrator
 
 [Container]
-Image=ghcr.io/orches-team/orches:4a74640729b7fd25cb889f55dcbd6cd36b7f1dfe
+Image=ghcr.io/orches-team/orches:770265f6fca8c976ae5dd7b1cc07c74d10615b5c
 Exec=run
 Environment=XDG_RUNTIME_DIR=/run/user/%U
 Volume=%h/.config/orches:/var/lib/orches
