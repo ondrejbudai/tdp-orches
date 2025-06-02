@@ -3,7 +3,7 @@ Description=Syncthing
 After=basic.target network.target
 
 [Container]
-Image=docker.io/syncthing/syncthing:1.29.6
+Image=docker.io/syncthing/syncthing:1.29.7
 Volume=/mnt/data/syncthing:/var/syncthing:Z
 PublishPort=22000:22000
 PublishPort=22000:22000/udp
