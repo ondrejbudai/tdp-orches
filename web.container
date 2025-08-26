@@ -4,7 +4,7 @@ After=basic.target default-network.service
 Requires=default-network.service
 
 [Container]
-Image=registry.gitlab.com/ondrejbudai/budai.cz:b785f22fd5b26a112b6f0d7379c9aaeb945dea3e
+Image=registry.gitlab.com/ondrejbudai/budai.cz:38c86c4980f4d3382e45f84afa65e274cf7bc133
 Network=default.network
 
 [Install]
