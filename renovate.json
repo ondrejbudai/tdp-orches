@@ -7,8 +7,8 @@
     {
       "customType": "regex",
       "description": "Update orches",
-      "fileMatch": [
-        "web.container$"
+      "managerFilePatterns": [
+        "/web.container$/"
       ],
       "matchStrings": [
         "Image=\\S*:(?<currentDigest>\\S*)"
@@ -20,8 +20,8 @@
     {
       "customType": "regex",
       "description": "Update quadlet container images",
-      "fileMatch": [
-        "[.]container$"
+      "managerFilePatterns": [
+        "/[.]container$/"
       ],
       "matchStrings": [
         "Image=(?<depName>\\S*):(?<currentValue>\\S*)"
